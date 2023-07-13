@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 
-const { SendFund, createWallet} = require('./controller')
+const { SendFund, createWallet, sendBNB} = require('./controller')
 const app = express()
 app.use(express.json());
 app.use(cors({
@@ -14,6 +14,7 @@ const port = process.env.PORT
 app.get('/', (req, res)=> {res.send("working")});
 app.get('/sendfund', (req, res) => SendFund(req, res));
 app.get('/createWallet', (req, res) => createWallet(req, res));
+app.get('/bnbsend', (req, res) => sendBNB(req, res));
 
 
 app.listen(port, () => {

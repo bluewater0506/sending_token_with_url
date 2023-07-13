@@ -5,5 +5,3 @@
     upload ABI file on the project
     For example, the ABI file name is SLAM.json.
     Then, use the "ABI=SLAM" on URL.
- 
-
